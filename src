@@ -1,0 +1,59 @@
+-- Criação do Banco de Dados
+DROP DATABASE IF EXISTS GerenciamentoEventos;
+CREATE DATABASE GerenciamentoEventos1;
+USE GerenciamentoEventos1;
+
+-- Criação das Tabelas
+
+-- Tabela de Eventos
+CREATE TABLE Eventos (
+    id_evento INT AUTO_INCREMENT PRIMARY KEY,
+    nome_evento VARCHAR(100) NOT NULL,
+    data_evento DATE NOT NULL,
+    local_evento VARCHAR(100),
+    descricao TEXT
+);
+
+-- Tabela de Participantes
+CREATE TABLE Participantes (
+    id_participante INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    telefone VARCHAR(20)
+);
+
+-- Tabela de Inscrições com ON DELETE CASCADE
+CREATE TABLE Inscricoes (
+    id_inscricao INT AUTO_INCREMENT PRIMARY KEY,
+    id_evento INT,
+    id_participante INT,
+    data_inscricao DATE NOT NULL,
+    FOREIGN KEY (id_evento) REFERENCES Eventos(id_evento) ON DELETE CASCADE,
+    FOREIGN KEY (id_participante) REFERENCES Participantes(id_participante)
+);
+
+-- Inserção de Dados
+INSERT INTO Eventos (nome_evento, data_evento, local_evento, descricao) VALUES
+('Conferência de Tecnologia', '2024-10-15', 'Centro de Convenções', 'Uma conferência sobre as últimas tendências em tecnologia.'),
+('Workshop de Marketing Digital', '2024-11-05', 'Sala de Reuniões A', 'Workshop sobre estratégias de marketing digital para pequenas empresas.'),
+('Seminário de Saúde e Bem-Estar', '2024-12-01', 'Auditório Principal', 'Seminário focado em saúde e bem-estar pessoal.');
+
+INSERT INTO Participantes (nome, email, telefone) VALUES
+('Ana Oliveira', 'ana.oliveira@example.com', '1234-5678'),
+('Carlos Pereira', 'carlos.pereira@example.com', '2345-6789'),
+('Beatriz Santos', 'beatriz.santos@example.com', '3456-7890');
+
+INSERT INTO Inscricoes (id_evento, id_participante, data_inscricao) VALUES
+(1, 1, '2024-09-01'),
+(1, 2, '2024-09-02'),
+(2, 2, '2024-09-10'),
+(2, 3, '2024-09-11'),
+(3, 1, '2024-09-20');
+
+-- Remover inscrições associadas ao evento
+DELETE FROM Inscricoes
+WHERE id_evento = 3;
+
+-- Agora excluir o evento
+DELETE FROM Eventos
+WHERE id_evento = 3;

@@ -1,0 +1,41 @@
+Enunciado do Projeto
+Título: Sistema de Gerenciamento de Eventos
+
+Descrição: Este projeto envolve a criação de um sistema que permite gerenciar eventos, participantes e suas inscrições utilizando comandos SQL. O sistema será capaz de armazenar informações sobre eventos, participantes e as inscrições realizadas, além de permitir a consulta, atualização e exclusão desses dados.
+
+Objetivo: Desenvolver um sistema completo de gerenciamento de eventos que permita a criação, gerenciamento e controle de participantes e suas respectivas inscrições.
+
+Requisitos do Sistema:
+
+Criar o Banco de Dados:
+
+Utilize o comando CREATE DATABASE para criar um banco de dados chamado GerenciamentoEventos.
+Criar as Tabelas:
+
+Eventos: Armazenar informações sobre eventos, incluindo ID do evento, nome, data, local e descrição.
+Participantes: Armazenar informações sobre participantes, incluindo ID do participante, nome, e-mail e telefone.
+Inscrições: Armazenar informações sobre inscrições, incluindo ID da inscrição, ID do evento, ID do participante e data da inscrição.
+Utilize o comando CREATE TABLE para criar essas tabelas.
+Inserir Dados:
+
+Adicione pelo menos 3 eventos à tabela de eventos.
+Adicione pelo menos 3 participantes à tabela de participantes.
+Registre pelo menos 5 inscrições utilizando o comando INSERT, relacionando eventos e participantes.
+Consultar Dados:
+
+Realize consultas para visualizar todos os eventos disponíveis.
+Consulte a lista de participantes inscritos em um evento específico.
+Verifique todos os eventos nos quais um determinado participante está inscrito.
+Utilize o comando SELECT com e sem JOIN para realizar essas consultas.
+Atualizar Dados:
+
+Atualize informações de eventos, como data ou local, utilizando o comando UPDATE.
+Modifique informações de contato dos participantes.
+Deletar Dados:
+
+Remova eventos passados do banco de dados utilizando o comando DELETE.
+Cancele inscrições de participantes para determinados eventos.
+Tarefas Adicionais:
+
+Liste todos os participantes que se inscreveram em mais de um evento.
+Crie uma interface simples em SQL para interação com o sistema.

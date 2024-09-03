@@ -1,0 +1,54 @@
+# Sistema de Gerenciamento de Eventos
+
+## Descrição
+
+Este projeto envolve a criação de um sistema para gerenciar eventos, participantes e inscrições. O sistema armazena e gerencia informações sobre eventos, participantes e inscrições realizadas, permitindo consultas, atualizações e exclusões.
+
+## Requisitos
+
+1. **Banco de Dados:**
+   - O banco de dados é criado com o nome `GerenciamentoEventos`.
+
+2. **Tabelas:**
+   - **Eventos:** Armazena detalhes sobre eventos.
+   - **Participantes:** Armazena detalhes sobre participantes.
+   - **Inscrições:** Registra as inscrições dos participantes em eventos.
+
+3. **Dados de Exemplo:**
+   - 3 eventos
+   - 3 participantes
+   - 5 inscrições
+
+4. **Consultas:**
+   - Listagem de todos os eventos.
+   - Participantes inscritos em eventos específicos.
+   - Eventos em que um participante está inscrito.
+
+5. **Atualizações e Exclusões:**
+   - Atualização de dados de eventos e participantes.
+   - Exclusão de eventos e inscrições.
+
+## Instruções
+
+1. **Criação do Banco de Dados e Tabelas:**
+   Execute o arquivo `database_setup.sql` para criar o banco de dados, tabelas e inserir dados.
+
+2. **Consultas e Manipulação de Dados:**
+   Utilize o arquivo `queries.sql` para realizar consultas e operações de atualização e exclusão.
+
+3. **Execução do SQL:**
+   Utilize um cliente SQL, como MySQL Workbench ou phpMyAdmin, para executar os scripts SQL fornecidos.
+
+## Arquivos
+
+- `database_setup.sql`: Script para criar o banco de dados e tabelas, inserir dados.
+- `queries.sql`: Script para consultas e manipulação de dados.
+
+## Tarefas Adicionais
+
+- Listagem de participantes inscritos em mais de um evento.
+- Criação de uma interface simples para interação com o sistema.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
